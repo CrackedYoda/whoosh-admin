@@ -4,5 +4,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: { port: 3001 },
-  preview: { port: 3001 },
+  // `npm start` serves the built files in production (e.g. on Railway),
+  // where the public hostname is not known in advance.
+  preview: { port: 3001, allowedHosts: true },
 });
