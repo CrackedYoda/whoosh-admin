@@ -30,7 +30,9 @@ npm run dev             # http://localhost:3001
 npm run build           # static files in dist/
 ```
 
-Deploy `dist/` to any static host (Railway, Vercel, Netlify, Cloudflare Pages).
+Deploy to any static host (Vercel, Netlify, Cloudflare Pages) by serving `dist/`.
+On Railway, add a service from this repo with build command `npm run build`,
+start command `npm start`, and the variable `VITE_API_URL`.
 `VITE_API_URL` is only the default for the sign-in form; it is not a secret.
 
 ## Security
